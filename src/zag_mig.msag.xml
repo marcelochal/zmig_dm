@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZAG_MIG</ARBGB>
+    <MASTERLANG>P</MASTERLANG>
+    <STEXT>AGIR - Mensagens de Extratores de Dados para Migração</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Erro chamando função de extração dados.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Erro extraindo dados usando o programa &amp;.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Programa extrator &amp; não existe. Reveja a configuração.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Nenhum dado selecionado para o filtro informado.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Não é possível recuperar os dados ALV</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Preencher Projeto(s) ou PEP(s)</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Extração Efetuada com Sucesso.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>&amp; &amp; &amp; &amp;</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Preencher Ordem(s) ou Grupo de ordens</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>P</SPRSL>
+     <ARBGB>ZAG_MIG</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Estrutura &amp; não existe. Reveja a configuração.</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>
