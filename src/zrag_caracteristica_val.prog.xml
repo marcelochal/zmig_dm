@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>ZRAG_CARACTERISTICA_VAL</NAME>
+    <STATE>A</STATE>
+    <VARCL>X</VARCL>
+    <SUBC>1</SUBC>
+    <RLOAD>P</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <TPOOL>
+    <item>
+     <ID>R</ID>
+     <ENTRY>PROGRAMA DE EXTRACAO - MM CARACTERISTICA VALOR</ENTRY>
+     <LENGTH>46</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LOCAL</KEY>
+     <ENTRY>Execução local</ENTRY>
+     <LENGTH>22</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_MAXREG</KEY>
+     <ENTRY>Nr máximo de registros</ENTRY>
+     <LENGTH>30</LENGTH>
+    </item>
+   </TPOOL>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZPROGRAMA</ROLLNAME>
+    <DDLANGUAGE>P</DDLANGUAGE>
+    <DOMNAME>PROGRAMM</DOMNAME>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Programa de extração</DDTEXT>
+    <REPTEXT>Programa de extração</REPTEXT>
+    <SCRTEXT_S>Progr Extr</SCRTEXT_S>
+    <SCRTEXT_M>Programa de extração</SCRTEXT_M>
+    <SCRTEXT_L>Programa de extração</SCRTEXT_L>
+    <DTELMASTER>P</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

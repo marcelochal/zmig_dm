@@ -1,0 +1,83 @@
+FUNCTION-POOL zgps_extracao_norma.    "MESSAGE-ID ..
+
+* INCLUDE LZGPS_EXTRACAO_DE_DEF_PROJD...     " Local class definition
+
+TYPES:
+  BEGIN OF typ_def_proj,
+    pspnr TYPE ps_intnr,
+    pspid TYPE ps_pspid,
+    objnr TYPE j_objnr,
+    vbukr TYPE ps_vbukr,
+    stat  TYPE j_status,
+    inact TYPE j_inact,
+  END   OF typ_def_proj.
+
+TYPES:
+  BEGIN OF typ_tkb1a,
+    aprof TYPE aprof,
+  END   OF typ_tkb1a.
+
+TYPES: BEGIN OF ys_alv_header,
+         objnr     LIKE cobra-objnr,
+         objnr_id  LIKE sy-msgv1,
+         objnr_txt LIKE sy-msgli,
+         aprof     LIKE cobra-aprof,
+         aprof_txt LIKE tkb1b-ptext,
+         absch     LIKE cobra-absch,
+         absch_txt LIKE tkb5b-stext,
+         ersch     LIKE cobra-ersch,
+         ersch_txt LIKE tkb9b-stext,
+         ursch     LIKE cobra-ursch,
+         ursch_txt LIKE tkb4b-stext,
+         bzdat     LIKE cobra-bzdat,
+         hienr     LIKE cobra-hienr,
+         srslist   LIKE cobra-srslist,
+         ernam     LIKE cobra-ernam,
+         erdat     LIKE cobra-erdat,
+         aenam     LIKE cobra-aenam,
+         aedat     LIKE cobra-aedat,
+       END OF ys_alv_header.
+
+TYPES: BEGIN OF ys_alv_data,
+         objnr      LIKE cobrb-objnr,
+         kokrs      LIKE cobrb-kokrs,
+         rec_objnr1 LIKE cobrb-rec_objnr1,
+         rec_id     LIKE kabr_gsum-empf,
+         rec_txt    LIKE sy-msgli,
+         rec2_objnr LIKE cobrb-rec_objnr1,
+         rec2_id    LIKE kabr_gsum-empf,
+         rec2_txt   LIKE sy-msgli,
+         prozs      LIKE cobrb-prozs,
+         aqzif      LIKE cobrb-aqzif,
+         perbz      LIKE cobrb-perbz,
+         urzuo      LIKE cobrb-urzuo,
+         betrr      LIKE cobrb-betrr,
+         bwaer      LIKE cobrb-bwaer,
+         brtyp      LIKE cobrb-brtyp,
+         brest      LIKE cobrb-brest,
+         gabpe      LIKE cobrb-gabpe,
+         gabja      LIKE cobrb-gabja,
+         gbisp      LIKE cobrb-gbisp,
+         gbisj      LIKE cobrb-gbisj,
+         erspe      LIKE cobrb-erspe,
+         ersja      LIKE cobrb-ersja,
+         letpe      LIKE cobrb-letpe,
+         letja      LIKE cobrb-letja,
+         avorg(20)  TYPE c,
+         versn      LIKE cobrb-versn,
+         srstrat    LIKE cobrb-srstrat,
+         dfreg      LIKE cobrb-dfreg,
+         werks      LIKE cobrb-werks,
+         bwtar      LIKE cobrb-bwtar,
+         strat      LIKE cobrb-strat,
+         bukrs      LIKE cobrb-bukrs,
+         gsber      LIKE cobrb-gsber,
+         prctr      LIKE cobrb-prctr,
+         bureg      LIKE cobrb-bureg,
+         anbwa      LIKE cobrb-anbwa,
+       END OF ys_alv_data.
+
+TYPES: typ_ti_def_proj TYPE STANDARD TABLE OF typ_def_proj ##NEEDED,
+       typ_ti_tkb1a    TYPE STANDARD TABLE OF typ_tkb1a    ##NEEDED,
+       typ_ti_header   TYPE SORTED TABLE   OF ys_alv_header WITH UNIQUE     KEY objnr  ##NEEDED,
+       typ_ti_data     TYPE SORTED TABLE   OF ys_alv_data   WITH NON-UNIQUE KEY objnr  ##NEEDED.

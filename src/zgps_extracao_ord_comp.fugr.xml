@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de compromissos para ordens</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPS_EXTRACAO_ORD_COMPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPS_EXTRACAO_ORD_COMP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPS_OBTER_ORD_COMP</FUNCNAME>
+     <SHORT_TEXT>Obter os compromissos para Ordens (KOB2)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_SO_ORDEM</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>RANGE_T_AUFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_GRP_ORD</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>AUFGR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_VBUKR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPI_ITOB_T_SEL_STATUS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_DATA_DEB</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ISU_RANGES_DATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_TPORD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>MNT_T_AUART_RANGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SAPCND/CODE_LINE_NUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_EXT_ORD_COMP</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_EXT_ORD_COMPROMISSO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_SALV_BS_SC_RUNTIME_INFO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_SO_ORDEM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range de ordens</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_GRP_ORD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Grupo de ordens</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista de Status a desconsiderar</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_DATA_DEB</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_TPORD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Estrutura de tabela ranges para &apos;tipo de ordem&apos;</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_EXT_ORD_COMP</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela para a extração de compromisso para ordens</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_SALV_BS_SC_RUNTIME_INFO</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_VALIDAR_ORD_COMP</FUNCNAME>
+     <SHORT_TEXT>Validar a ordem</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_ORDEM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>AUFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_EMPRESA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_VALOR_TOT</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>WKGXXX</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_VBUKR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_SO_TPORD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>MNT_T_AUART_RANGE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BU_TJ02T_T</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_ORDEM_VALIDADA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR01</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_ORDEM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº ordem</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_EMPRESA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Empresa</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_VALOR_TOT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Valor total</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_SO_TPORD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Estrutura de tabela ranges para &apos;tipo de ordem&apos;</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista textos p/status sistema</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_ORDEM_VALIDADA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ordem validada</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

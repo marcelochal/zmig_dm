@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de Tarefas</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPS_EXTRACAO_TAREFATOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPS_EXTRACAO_TAREFA</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPS_OBTER_TAREFAS</FUNCNAME>
+     <SHORT_TEXT>Obter as Tarefas (CN47N)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_PROJ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_PEPS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CURTO_PSPNR_RANGE_T</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_VBUKR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPI_ITOB_T_SEL_STATUS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SAPCND/CODE_LINE_NUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_EXT_TAREFA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_EXT_TAREFA</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>P_E_TI_OBJETOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>TTO_ADSPC_OBJ</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_SALV_BS_SC_RUNTIME_INFO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Projetos</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_PEPS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela range elemento PEP</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista de Status a desconsiderar</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_EXT_TAREFA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela para extração de tarefas</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_OBJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela de objetos</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_SALV_BS_SC_RUNTIME_INFO</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_VALIDAR_TAREFA</FUNCNAME>
+     <SHORT_TEXT>Validar a Tarefa</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_DR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>NW_AUFNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BU_TJ02T_T</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TAR_VALIDADA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR01</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_DR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº diagrama rede</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status a serem desconsiderados (EN)</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TAR_VALIDADA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tarefa validada</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

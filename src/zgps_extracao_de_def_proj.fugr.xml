@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de definições de projetos</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPS_EXTRACAO_DE_DEF_PROJTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPS_EXTRACAO_DE_DEF_PROJ</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPS_COMM_HANDLER_APPLSTACK</FUNCNAME>
+     <SHORT_TEXT>Evitar a &quot;rechamada&quot; da tela de seleção do LDB</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_NOME_PROG_STANDAD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>RSTI_RONAM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_NOME_PROG_STANDAD</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>BRST objeto destinatário</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_CONV_STATUS_ES</FUNCNAME>
+     <SHORT_TEXT>Converte os Status para Inglês</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPI_ITOB_T_SEL_STATUS</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_STATUS_EN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BU_TJ02T_T</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_STATUS_EN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista textos p/status sistema</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_EXIT_STATUS_SYST</FUNCNAME>
+     <SHORT_TEXT>Exit para a ajuda de pesquisa ZRAG_STATUS_SYST</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SHLP</PARAMETER>
+       <TYP>SHLP_DESCR</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <DBFIELD>DDSHF4CTRL</DBFIELD>
+      </RSCHA>
+     </CHANGING>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <TYP>SHLP_DESCT</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <DBSTRUCT>SEAHLPRES</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SHLP_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RECORD_TAB</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SHLP</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CALLCONTROL</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_OBTER_DEF_PROJETOS</FUNCNAME>
+     <SHORT_TEXT>Obter as definições de projetos (CN42N)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_CHAMADA_FINAL</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR01</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_PROJ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_VBUKR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPI_ITOB_T_SEL_STATUS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SAPCND/CODE_LINE_NUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_EXT_DEF_PROJ</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_EXT_DEF_PROJ</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>P_E_TI_STATUS_EN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BU_TJ02T_T</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>P_E_TI_OBJETOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>TTO_ADSPC_OBJ</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>P_E_RG_PROJETOS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_PROJ</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_SALV_BS_SC_RUNTIME_INFO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_CHAMADA_FINAL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Chamada final ou Intermediária</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Projetos</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista de Status a desconsiderar</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_EXT_DEF_PROJ</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela para a extração de Definições de Projetos</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_STATUS_EN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Status a serem desconsiderados (EN)</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_OBJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela de objetos</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_RG_PROJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Projetos</STEXT>
+       <INDEX> 009</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_SALV_BS_SC_RUNTIME_INFO</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 010</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_VALIDAR_DEF_PROJETOS</FUNCNAME>
+     <SHORT_TEXT>Validar a definição de projeto</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_PROJECT_DEFINITION</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>PS_PSPID</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BU_TJ02T_T</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_PROJETO_VALIDADO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CHAR01</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_PROJECT_DEFINITION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Definição do projeto</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_TI_STATUS_EN</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista textos p/status sistema</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_PROJETO_VALIDADO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Projeto validado</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

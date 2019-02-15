@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZPEINH</ROLLNAME>
+    <DDLANGUAGE>P</DDLANGUAGE>
+    <DOMNAME>PACK3</DOMNAME>
+    <LOGFLAG>X</LOGFLAG>
+    <HEADLEN>03</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>20</SCRLEN3>
+    <DDTEXT>Unidade de preço</DDTEXT>
+    <REPTEXT>por</REPTEXT>
+    <SCRTEXT_S>/</SCRTEXT_S>
+    <SCRTEXT_M>Unidade preço</SCRTEXT_M>
+    <SCRTEXT_L>Unidade de preço</SCRTEXT_L>
+    <APPLCLASS>MG</APPLCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>PRICE_UNIT</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>D</LANGU>
+    <LANGU>E</LANGU>
+    <LANGU>I</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Unidade Preço</DDTEXT>
+     <REPTEXT>pro</REPTEXT>
+     <SCRTEXT_S>Uni.Preço</SCRTEXT_S>
+     <SCRTEXT_M>Unidade Preço</SCRTEXT_M>
+     <SCRTEXT_L>Unidade Preço</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DDTEXT>Price Unit</DDTEXT>
+     <REPTEXT>per</REPTEXT>
+     <SCRTEXT_S>/</SCRTEXT_S>
+     <SCRTEXT_M>Price Unit</SCRTEXT_M>
+     <SCRTEXT_L>Price Unit</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>I</DDLANGUAGE>
+     <DDTEXT>Unità di prezzo</DDTEXT>
+     <REPTEXT>per</REPTEXT>
+     <SCRTEXT_S>/</SCRTEXT_S>
+     <SCRTEXT_M>Unità di prezzo</SCRTEXT_M>
+     <SCRTEXT_L>Unità di prezzo</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
