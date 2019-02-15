@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>GF para Nota de Manutenção</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPM_EXTRACAO_DE_NOTAS_MANTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPM_EXTRACAO_DE_NOTAS_MAN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPM_OBTER_NOTAS_MANUT</FUNCNAME>
+     <SHORT_TEXT>Lista de Notas</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_RANGE_DATA</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>RANGE_T_DATS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_RANGE_QMART</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZRANGE_T_QMART</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_MAXREG</PARAMETER>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_NOTAS_T2_T3</PARAMETER>
+       <TYP>ZTAGIR_NOTAS</TYP>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_RANGE_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela range para o elemento de dados SYDATUM</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_RANGE_QMART</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_MAXREG</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_NOTAS_T2_T3</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tipo de tabela para dados das notas T2 e T3.</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

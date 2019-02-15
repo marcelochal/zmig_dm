@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de adiantamento</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPS_EXTRACAO_ADIANTAMENTOTOP</SOBJ_NAME>
+    <SOBJ_NAME>ZPSI_TRATAR_SERVICO</SOBJ_NAME>
+    <SOBJ_NAME>ZXKAEPU01</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPS_EXTRACAO_ADIANTAMENTO</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPS_EXIT_SAPLKAEP_001</FUNCNAME>
+     <SHORT_TEXT>Line Item Reports in Actual: Customer-Specific Fields in Display Variant</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_REP_OBJECT</PARAMETER>
+       <DBFIELD>TKALV-REP_OBJECT</DBFIELD>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>CS_RECORD</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>KAEP_COVP_EXT</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_REP_OBJECT</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CS_RECORD</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZFPS_OBTER_ADIANTAMENTO</FUNCNAME>
+     <SHORT_TEXT>Obter os adiantamentos (CJI3 - cat. valores 12 e 60)</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_PROJ</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_PEPS</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <REFERENCE>X</REFERENCE>
+       <TYP>CURTO_PSPNR_RANGE_T</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_RANGE_VBUKR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>BAPI_ITOB_T_SEL_STATUS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_DATA_LANC</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ISU_RANGES_DATE</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SAPCND/CODE_LINE_NUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_EXT_ADIANTAMENTO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTPS_EXT_ADIANTAMENTO</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>CX_SALV_BS_SC_RUNTIME_INFO</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_PROJETOS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Projetos</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_PEPS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela range elemento PEP</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_RG_STATUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Lista de Status a desconsiderar</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_DATA_LANC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_EXT_ADIANTAMENTO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela para extração de adiantamento</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CX_SALV_BS_SC_RUNTIME_INFO</PARAMETER>
+       <KIND>X</KIND>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

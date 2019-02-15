@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SRFC" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SRFC>
+    <HEADER>
+     <ID>ZFFI_AR_ACC_GETOPENITEMS</ID>
+     <VERSION>A</VERSION>
+     <FUNCNAME>ZFFI_AR_ACC_GETOPENITEMS</FUNCNAME>
+     <CREATEDBY>ABAP-INTPRO4</CREATEDBY>
+     <CREATEDON>2018-08-15</CREATEDON>
+     <CREATEDAT>18:27:27</CREATEDAT>
+    </HEADER>
+    <TEXT>
+     <ID>ZFFI_AR_ACC_GETOPENITEMS</ID>
+     <VERSION>A</VERSION>
+     <LANG>P</LANG>
+     <SHORTTEXT>Serviço RFC padrão para módulo de função: ZFFI_AR_ACC_GETOPENITEMS</SHORTTEXT>
+    </TEXT>
+   </SRFC>
+  </asx:values>
+ </asx:abap>
+</abapGit>

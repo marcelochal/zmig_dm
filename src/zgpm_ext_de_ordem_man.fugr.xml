@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>GF para Ordem de Manutenção</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGPM_EXT_DE_ORDEM_MANTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGPM_EXT_DE_ORDEM_MAN</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFPM_OBTER_ORDEM_MANUT</FUNCNAME>
+     <SHORT_TEXT>LISTAR ORDEM DE MANUTENÇÃO</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_RANGE_DATA</PARAMETER>
+       <TYP>RANGE_T_DATS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_MAXREG</PARAMETER>
+       <TYP>I</TYP>
+      </RSIMP>
+     </IMPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>T_RESULT_OUT</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>ZTAGIR_ORDENS</TYP>
+      </RSTBL>
+      <RSTBL>
+       <PARAMETER>I_AMPLIACAO</PARAMETER>
+       <DBSTRUCT>ZES_AMPLIACAO_LIST</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_RANGE_DATA</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela range para o elemento de dados SYDATUM</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_MAXREG</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_RESULT_OUT</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ordens ALM: lista de operações da seleção</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_AMPLIACAO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Ampliação Ordem Lista</STEXT>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

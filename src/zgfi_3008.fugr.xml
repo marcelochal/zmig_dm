@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de títulos em aberto AP</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGFI_3008F00</SOBJ_NAME>
+    <SOBJ_NAME>LZGFI_3008TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGFI_3008</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFFI_AP_ACC_GETOPENITEMS</FUNCNAME>
+     <SHORT_TEXT>Cópia da BAPI_AP_ACC_GETOPENITEMS</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>COMPANYCODE</PARAMETER>
+       <DBFIELD>BAPI3008_1-COMP_CODE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>VENDOR</PARAMETER>
+       <DBFIELD>BAPI3008_1-VENDOR</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>KEYDATE</PARAMETER>
+       <DBFIELD>BAPI3008-KEY_DATE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>NOTEDITEMS</PARAMETER>
+       <DBFIELD>BAPI3008-NTDITMS_RQ</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBFIELD>BAPIRETURN</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>LINEITEMS</PARAMETER>
+       <DBSTRUCT>ZEFI_BAPI3008_2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>COMPANYCODE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>VENDOR</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>KEYDATE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOTEDITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LINEITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Estrutura de transferência 1008/Creditor/part.indiv.</STEXT>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

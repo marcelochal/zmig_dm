@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de ítens abertos GL</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGFI_EXTRACAO_ITENS_GLF01</SOBJ_NAME>
+    <SOBJ_NAME>LZGFI_EXTRACAO_ITENS_GLF02</SOBJ_NAME>
+    <SOBJ_NAME>LZGFI_EXTRACAO_ITENS_GLTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGFI_EXTRACAO_ITENS_GL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFFI_FAGL_GET_OPEN_ITEMS_GL</FUNCNAME>
+     <SHORT_TEXT>Cópia do grupo de função standard FAGL_MIG_CRESUM</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>I_MIGDT</PARAMETER>
+       <TYP>BUDAT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <TYP>BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_HKONT</PARAMETER>
+       <TYP>FAGL_T_SAKNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FIELDLIST</PARAMETER>
+       <TYP>TTFIELDNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_FIELDLIST_INTO</PARAMETER>
+       <TYP>FAGL_T_MIG_FIELD_INTO</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_READ_BSEG</PARAMETER>
+       <TYP>FLAG</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>I_MAX_REG</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/BCV/QRM_ST_RECORDS_MAX</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_OPEN_ITEMS</PARAMETER>
+       <TYP>ZTFI_ITENS_ABERTOS_GL</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>I_MIGDT</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_BUKRS</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_HKONT</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FIELDLIST</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_FIELDLIST_INTO</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_READ_BSEG</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>I_MAX_REG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Número máximo de registros de resultados solicitados</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_OPEN_ITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Extração dos ítens em aberto GL</STEXT>
+       <INDEX> 008</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

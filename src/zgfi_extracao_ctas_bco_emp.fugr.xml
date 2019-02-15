@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de contas nos bancos da empresa</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGFI_EXTRACAO_CTAS_BCO_EMPTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGFI_EXTRACAO_CTAS_BCO_EMP</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFFI_OBTER_CONTAS_BCO_EMPRESA</FUNCNAME>
+     <SHORT_TEXT>Obter as contas nos bancos da empresa</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>FAGL_RANGE_T_BUKRS</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SAPCND/CODE_LINE_NUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>P_E_TI_EXT_CTAS_BCO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTFI_EXT_CONTAS_BCO_EMPRESA</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>P_I_EMPRESAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela Range para Empresas</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_I_NUM_LINHAS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Nº linha de um report</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>P_E_TI_EXT_CTAS_BCO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tabela para a extração de contas nos bancos da empresa</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+     <EXCEPTION_CLASSES>X</EXCEPTION_CLASSES>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

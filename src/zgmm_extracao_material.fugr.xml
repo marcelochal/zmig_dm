@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>PROGRAMA DE EXTRECAO - MESTRE MATERIAIS</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGMM_EXTRACAO_MATERIALTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGMM_EXTRACAO_MATERIAL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFMM_EXTRACAO_SELECIONA_MAT</FUNCNAME>
+     <SHORT_TEXT>SELECIONA OS MATERIAIS PARA EXTRACAO</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>PI_MATNR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZFMM_EXTRACAO_MATNR</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>PI_CORTE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>DATUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>PE_MATNR</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZFMM_EXTRACAO_MATNR_EXP</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>PI_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PROGRAMA DE EXTRACAO - MM MATERIAL</STEXT>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PI_CORTE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Data</STEXT>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>PE_MATNR</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>PROGRAMA DE EXTRACAO - MM MATERIAL</STEXT>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

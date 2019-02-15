@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Extração de títulos em aberto AR</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZGFI_3007F00</SOBJ_NAME>
+    <SOBJ_NAME>LZGFI_3007TOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZGFI_3007</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZFFI_AR_ACC_GETOPENITEMS</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Offene Posten des Debitorenkontos an einem Stichtag</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>COMPANYCODE</PARAMETER>
+       <DBFIELD>BAPI3007_1-COMP_CODE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>CUSTOMER</PARAMETER>
+       <DBFIELD>BAPI3007_1-CUSTOMER</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>KEYDATE</PARAMETER>
+       <DBFIELD>BAPI3007-KEY_DATE</DBFIELD>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>NOTEDITEMS</PARAMETER>
+       <DBFIELD>BAPI3007-NTDITMS_RQ</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>SECINDEX</PARAMETER>
+       <DBFIELD>BAPI3007-SINDEX_RQ</DBFIELD>
+       <DEFAULT>SPACE</DEFAULT>
+       <OPTIONAL>X</OPTIONAL>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>RETURN</PARAMETER>
+       <DBFIELD>BAPIRETURN</DBFIELD>
+      </RSEXP>
+     </EXPORT>
+     <TABLES>
+      <RSTBL>
+       <PARAMETER>LINEITEMS</PARAMETER>
+       <DBSTRUCT>ZEFI_BAPI3007_2</DBSTRUCT>
+      </RSTBL>
+     </TABLES>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>COMPANYCODE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 001</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>CUSTOMER</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 002</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>KEYDATE</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 003</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOTEDITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 004</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>SECINDEX</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 005</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RETURN</PARAMETER>
+       <KIND>P</KIND>
+       <INDEX> 006</INDEX>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>LINEITEMS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Estrutura de transferência 1007/Cliente/Part.individ.</STEXT>
+       <INDEX> 007</INDEX>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
